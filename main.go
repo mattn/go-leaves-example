@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/dmitryikh/leaves"
@@ -25,10 +24,10 @@ func main() {
 
 	truePredictions, err := mat.DenseMatFromCsvFile("iris_pred.tsv", 0, false, "\t", 0.0)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	if err := util.AlmostEqualFloat64Slices(truePredictions.Values, predictions, 1e-6); err != nil {
-		panic(fmt.Errorf("different raw predictions: %s", err.Error()))
+		log.Fatalf("different raw predictions: %s", err.Error())
 	}
 }
