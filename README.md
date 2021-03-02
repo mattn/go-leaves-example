@@ -1,6 +1,6 @@
 # go-leaves-example
 
-Example code using [leaves](github.com/dmitryikh/leaves).
+Example code using [leaves](https://github.com/dmitryikh/leaves).
 
 ## License
 
